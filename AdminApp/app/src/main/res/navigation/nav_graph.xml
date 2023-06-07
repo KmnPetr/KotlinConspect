@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/LoginFragment">
+
+    <fragment
+        android:id="@+id/LoginFragment"
+        android:name="com.example.adminapp.views.LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_LoginFragment_to_WordsListFragment"
+            app:destination="@id/WordsListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/WordsListFragment"
+        android:name="com.example.adminapp.views.WordsListFragment"
+        tools:layout="@layout/fragment_words_list">
+        <action
+            android:id="@+id/action_WordsListFragment_to_createNewWordFragment"
+            app:destination="@id/createNewWordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createNewWordFragment"
+        android:name="com.example.adminapp.views.CreateNewWordFragment"
+        android:label="fragment_create_new_word"
+        tools:layout="@layout/fragment_create_new_word" >
+        <action
+            android:id="@+id/action_createNewWordFragment_to_WordsListFragment"
+            app:destination="@id/WordsListFragment" />
+    </fragment>
+</navigation>
